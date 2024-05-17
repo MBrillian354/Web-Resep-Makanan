@@ -1,5 +1,5 @@
 <?php
-    include "database.php";
+    include "connect.php";
     include "update_database.php";
 
     $process_saved_recipe = mysqli_query($connection, "SELECT * FROM recipe_detail WHERE save=1") or die (mysqli_error($connection));
@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       body {
         font-family: "Poppins";
@@ -55,10 +56,10 @@
         <div class="collapse navbar-collapse ms-4" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item me-2">
-              <a class="nav-link" href="#" style="color: white; font-size: 20px;">Recipe</a>
+              <a class="nav-link" href="index.php" style="color: white; font-size: 20px;">Recipe</a>
             </li>
             <li class="nav-item me-2">
-              <a class="nav-link" href="#" style="color: white; font-size: 20px">Article</a>
+              <a class="nav-link" href="articles.html" style="color: white; font-size: 20px">Article</a>
             </li>
           </ul>
           <div class="dropdown" style="width: 71%">
@@ -233,47 +234,57 @@
       
     </div>
 
-    <footer class="text-black pt-4 pb-4" style="background-color: #ffaf45;">
-      <div class="container-fluid text-center">
-        <div class="row text-center ps-2 pe-4">
-          <div class="col-3 d-flex justify-content-start" style="font-size: 25px;">Masakuy</div>
-          <div
-            class="col-6 d-flex justify-content-evenly"
-            style="padding-top: 0.5rem;"
-          >
-            <a
-              href="#"
-              class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-              >Home</a
-            >
-            <a
-              href="#"
-              class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-              >Recipe</a
-            >
-            <a
-              href="articles.html"
-              class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-              >Article</a
-            >
-          </div>
-          <div class="col-3 d-flex justify-content-end">
-            <i
-              class="bi bi-whatsapp"
-              style="font-size: 28px; margin-right: 10px"
-            ></i>
-            <i
-              class="bi bi-instagram"
-              style="font-size: 28px; margin-right: 10px"
-            ></i>
-            <i
-              class="bi bi-twitter-x"
-              style="font-size: 28px; margin-right: 10px"
-            ></i>
+    <footer style="font-family: Poppins; background-color: #ffaf45;">
+      <div class="container pb-3 " style="text-align:left">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 border-top pb-2" >
+        <div class="col-5">
+          <h3 style="font-weight: 600; ">Masakuy</h3>
+          <p class="text-body-secondary fw-semibold" style="text-align: justify;" >Explore authentic and healthy recipes. Traditional and global food at the palm of your hand</p>
+        </div>
+    
+        <div class="col-2 offset-2">
+          <h4 style="font-weight: 600; ">Explore</h4>
+          <ul class="nav flex-column fw-semibold">
+            <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-body-secondary">Recipe</a></li>
+            <li class="nav-item mb-2"><a href="articles.html" class="nav-link p-0 text-body-secondary">Articles</a></li>
+          </ul>
+        </div>
+    
+        <div class="col-2">
+          <h4 style="font-weight: 600; ">Information</h4>
+          <ul class="nav flex-column fw-semibold">
+            <li class="nav-item mb-2"><a href="terms_condition.html" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>
+            <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">F&Q</a></li>
+            <li class="nav-item mb-2"><a href="contact_us.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div class="col-2">
+          <h4 style="font-weight: 600; ">Find Us On</h4>
+          <div class="row" style="font-size: 40px">
+            <div class="col-3">
+                <a href="https://www.whatsapp.com" class="text-black" target="_blank">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://www.instagram.com" class="text-black" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="col-2">
+                <a href="https://www.twitter.com" class="text-black" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
           </div>
         </div>
+
       </div>
-    </footer>
+      <p class="text-center">© 2024 Masakuy</p>
+      </div>
+      </footer>
     
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

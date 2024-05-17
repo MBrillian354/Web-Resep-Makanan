@@ -1,5 +1,11 @@
-# PHP Password Reset by Email
+# Web-Resep-Makanan (dalam pengembangan)
+Web ini diperuntukkan sebagai syarat tugas mata kuliah Manajer Proyek Perangkat Lunak
 
-Source code to accompany this video: https://youtu.be/R9bfts9ZFjs
-
-[![PHP Password Reset by Email](https://img.youtube.com/vi/R9bfts9ZFjs/0.jpg)](https://youtu.be/R9bfts9ZFjs)
+Web ini merupakan website untuk resep makanan yang ditargetkan kepada anak kosan, sehingga berisi resep-resep sederhana. Web ini dilengkapi beberapa fitur, yakni:
+- Login logout
+- Filter kategori makanan
+- List resep
+- Simpan resep
+- Artikel
++ Profile
++ beranda

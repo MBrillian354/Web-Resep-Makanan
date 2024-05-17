@@ -4,9 +4,9 @@
         $hostname = "localhost";
         $userDatabase = "root";
         $passwordUser = "";
-        $databaseName = "login_db";
+        $databaseName = "recipesave";
 
-        $koneksi = mysqli_connect($hostname, $userDatabase, $passwordUser, $databaseName) or die (mysqli_error(koneksi()));
+        $koneksi = mysqli_connect($hostname, $userDatabase, $passwordUser, $databaseName) or die (msqli_error());
 
         return $koneksi;
     }

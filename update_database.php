@@ -1,5 +1,5 @@
 <?php
-include "database.php";
+include "connect.php";
 
 if (isset($_POST['value']) && isset($_POST['recipe_id'])) {
   $value = $_POST['value'];
